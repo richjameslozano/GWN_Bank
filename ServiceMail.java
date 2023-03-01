@@ -56,7 +56,7 @@ public class ServiceMail {
             message.setFrom(new InternetAddress(from));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
             message.setSubject("Welcome to JGFBank");
-            message.setText("Hi " + name + "!\n\nYour Verification Code is : " + code + "\n\nYou're almost dont! To finish setting up your JGFBank account, enter the code to verify your email address.");
+            message.setText("Hi " + name + "!\n\nYour Verification Code is : " + code + "\n\nYou're almost done! To finish setting up your JGFBank account, enter the code to verify your email address.");
             Transport transport = session.getTransport("smtp");
             transport.connect(host, from, password);
             transport.sendMessage(message, message.getAllRecipients());
